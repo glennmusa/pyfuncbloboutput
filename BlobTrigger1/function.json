@@ -6,13 +6,13 @@
       "type": "blobTrigger",
       "direction": "in",
       "path": "sample-images/{name}",
-      "connection": "YOUR_IN_STORAGE_ACCOUNT_CONNECTION_STRING"
+      "connection": "YOUR_IN_STORAGE_ACCOUNT_CONNECTION_STRING_FUNCTIONS_SETTING"
     },
     {
       "name": "outputblob",
       "type": "blob",
       "path": "sample-images-copy/{name}",
-      "connection": "YOUR_OUT_STORAGE_ACCOUNT_CONNECTION_STRING",
+      "connection": "YOUR_OUT_STORAGE_ACCOUNT_CONNECTION_STRING_FUNCTIONS_SETTING",
       "direction": "out"
     }
   ]
