@@ -10,7 +10,7 @@ def main(destblob: func.InputStream):
                  f"Blob Size: {destblob.length} bytes")
 
     blob_name = os.path.basename(destblob.name)
-    default_default_blob_byte_type = "application/octet-stream"
+    default_blob_byte_type = "application/octet-stream"
 
     source_connection_string = os.environ["source_connection_string"]
     source_container_name = os.environ["source_container_name"]
@@ -28,7 +28,7 @@ def main(destblob: func.InputStream):
 
     if(current_content_type == default_blob_byte_type):
         logging.info(
-            f"Blob has content-type '{default_blob_byte_type}'. Sourcing the content-type from {source_container_name}.")
+            f"Blob has content-type '{default_blob_byte_type}'. Sourcing the content-type from {source_container_name}...")
 
         source_client = BlobClient.from_connection_string(
             source_connection_string,
@@ -40,13 +40,14 @@ def main(destblob: func.InputStream):
         source_content_type = source_properties.content_settings.content_type
 
         logging.info(
-            f"Setting content-type for {blob_name} in {destination_container_name} to {source_content_type}")
+            f"Setting content-type for {blob_name} in {destination_container_name} to {source_content_type}...")
 
         destination_client.set_http_headers(
             content_settings=ContentSettings(content_type=source_content_type)
         )
 
-        logging.info(f"Done setting content-type for {blob_name}")
+        logging.info(
+            f"Complete. Set content-type for {blob_name} in {destination_container_name}.")
     else:
         logging.info(
             f"Blob already has a content-type '{current_content_type}'. Exiting.")

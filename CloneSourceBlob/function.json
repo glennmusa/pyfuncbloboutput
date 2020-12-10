@@ -9,7 +9,7 @@
       "connection": "source_connection_string"
     },
     {
-      "name": "outputblob",
+      "name": "destblob",
       "type": "blob",
       "path": "sample-copy/{name}",
       "connection": "destination_connection_string",
