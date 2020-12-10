@@ -4,7 +4,6 @@
     "AzureWebJobsStorage": "YOUR_AZURE_FUNCTIONS_STORAGE_ACCOUNT_CONNECTION_STRING",
     "FUNCTIONS_WORKER_RUNTIME": "python",
     "source_connection_string": "YOUR_SOURCE_STORAGE_ACCOUNT_CONNECTION_STRING",
-    "source_account_key": "YOUR_SOURCE_STORAGE_ACCOUNT_KEY",
     "source_container_name": "sample",
     "destination_connection_string": "YOUR_DESTINATION_STORAGE_ACCOUNT_CONNECTION_STRING",
     "destination_container_name": "sample-copy"
