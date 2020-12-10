@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "srcblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "sample/{name}",
+      "connection": "source_connection_string"
+    },
+    {
+      "name": "outputblob",
+      "type": "blob",
+      "path": "sample-copy/{name}",
+      "connection": "destination_connection_string",
+      "direction": "out"
+    }
+  ]
+}
