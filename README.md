@@ -6,4 +6,5 @@ Uses the [Azure Functions Storage Blob Trigger](https://docs.microsoft.com/en-us
 ## To get started:
 1. Clone [./local.settings.json.sample](./local.settings.json.sample) and rename it to `local.settings.json`
 1. Subtitute the settings values with your resources
-1. All the fun stuff happens in [./pyfuncblobclone/\_\_init\_\_.py](pyfuncblobclone/__init__.py)
+1. The blob is cloned in [./CloneSourceBlob/\_\_init\_\_.py](CloneBlobSource/__init__.py)
+1. Content-type is set in [./SetDestinationContentType/\_\_init\_\_.py](SetDestinationContentType/__init__.py)
